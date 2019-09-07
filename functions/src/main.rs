@@ -16,6 +16,8 @@ fn main(){
 
   // Filter out non even numbers
   numbers::filter(&vs, &numbers::is_even);
+
+  // Matrix multiplication
   matrices::mat_mult(&mat1, &mat2);
 
 }
