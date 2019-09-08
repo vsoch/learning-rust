@@ -30,6 +30,6 @@ pub fn mat_mult(mat1: &Matrix, mat2: &Matrix) -> Matrix {
 fn mat_mult_base(mat1: &Matrix, mat2: &Matrix) -> Matrix {
   let rows = mat1.len();
   let cols = mat2[0].len();
-  let mut product = vec![vec![0.; rows]; cols];
+  let product = vec![vec![0.; rows]; cols];
   return product;
 }

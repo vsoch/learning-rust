@@ -1,5 +1,6 @@
 pub mod numbers;
 pub mod matrices;
+pub mod games;
 
 fn main(){
 
@@ -20,4 +21,6 @@ fn main(){
   // Matrix multiplication
   matrices::mat_mult(&mat1, &mat2);
 
+  // Sieve of Eratosthenes
+  games::sieve(7);
 }

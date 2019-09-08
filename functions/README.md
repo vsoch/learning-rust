@@ -19,4 +19,9 @@ Matrix 1 [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0], [1.0, 1.0, 1.0]]
 Matrix 2 [[5.0, 5.0, 5.0], [5.0, 5.0, 5.0], [5.0, 5.0, 5.0]]
 Empty Matrix to fill [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 Finished matrix: [[15.0, 15.0, 15.0], [15.0, 15.0, 15.0], [15.0, 15.0, 15.0]]
+Starting number for sieve is 7
+Adding 4 to skip
+Adding 5 to skip
+Adding 6 to skip
+Final list of primes is [2, 3, 5]
 ```
