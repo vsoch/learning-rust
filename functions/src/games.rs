@@ -1,6 +1,6 @@
 // games.rs
 
-//// Find all prime numbers less than n.
+/// Find all prime numbers less than n.
 pub fn sieve(n: u32) -> Vec<u32> {
   let mut skip = vec![];
   let mut primes = vec![];
@@ -31,4 +31,32 @@ pub fn sieve(n: u32) -> Vec<u32> {
   }
   println!("Final list of primes is {:?}", primes);
   return primes;
+}
+
+
+/// This is an enum, reference like `Peg::B`, etc.
+#[derive(Clone, Copy, Debug, Eq, PartialEq)]
+pub enum Peg {
+    A,
+    B,
+    C,
+}
+
+/// A move between a source and destination
+pub type Move = (Peg, Peg);
+
+// Given a number of disks, a source and destination, return vector of moves
+pub fn hanoi(num_disks: u32, src: Peg, aux: Peg, dst: Peg) -> Vec<Move> {
+
+  let mut moves = vec![];
+
+  // If we have one disk, move it and return
+  if num_disks == 1 {
+    moves.push((src, dst));      
+  } else {
+    moves.append(&mut hanoi(num_disks - 1, src, dst, aux));   // Step 1
+    moves.push((src, dst));                                   // Step 2
+    moves.append(&mut hanoi(num_disks - 1, aux, dst, src));   // Step 1
+  }
+  return moves;
 }

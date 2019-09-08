@@ -23,4 +23,9 @@ fn main(){
 
   // Sieve of Eratosthenes
   games::sieve(7);
+
+  // Towers of Hanoi
+  let moves = games::hanoi(3, games::Peg::A, games::Peg::B, games::Peg::C);
+  println!("Final moves are {:?}", moves);
+
 }
