@@ -1,8 +1,7 @@
 # Learning Rust!
 
 I found an old repository with [homeworks](https://github.com/cis198-2016s)
-and it looks like a great way to learn! I'll also add some random Advent of
-Code Problems here.
+and it looks like a great way to learn! I'll also add some random tasks.
 
 To creat a new project:
 
