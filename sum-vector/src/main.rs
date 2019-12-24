@@ -1,12 +1,11 @@
 // Read in input.txt and sum it up
 
+use dayone::Config;
 use std::env;
 use std::error::Error;
 use std::process;
-use dayone::Config;
 
 fn main() {
-
     let args: Vec<String> = env::args().collect();
     let config = Config::new(&args).unwrap_or_else(|err| {
         println!("Problem parsing arguments: {}", err);

@@ -11,7 +11,6 @@ pub struct Config {
 
 impl Config {
     pub fn new(args: &[String]) -> Result<Config, &'static str> {
-
         if args.len() < 2 {
             return Err("Please provide a filename!");
         }
@@ -22,14 +21,12 @@ impl Config {
 }
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
-
     // read the file
     let vec = read(&config.filename)?;
     let sum: i64 = vec.iter().sum();
     println!("The sum is {:?}", sum);
     Ok(())
 }
-
 
 fn read(path: &str) -> Result<Vec<i64>, io::Error> {
     let file = fs::File::open(path)?;
@@ -39,8 +36,8 @@ fn read(path: &str) -> Result<Vec<i64>, io::Error> {
     // create an iterator over lines in the reader
     for line in br.lines() {
         let line = line?;
-        let n = line   
-            .trim() 
+        let n = line
+            .trim()
             .parse() // parse integer
             .map_err(|e| io::Error::new(io::ErrorKind::InvalidData, e))?;
         v.push(n);
