@@ -32,14 +32,20 @@ And then confirm it is correct!
 
 ```bash
 $ exercism workspace
-/home/vanessa/Desktop/Code/learning-elm
+/home/vanessa/Desktop/Code/learning-rust
 ```
 
 For each exercise, we will want to download code like:
 
 ```bash
-exercism download --exercise=hello-world --track=elm
-/home/vanessa/Desktop/Code/learning-elm/elm/hello-world
+exercism download --exercise=hello-world --track=rust
+/home/vanessa/Desktop/Code/learning-rust/rust/hello-world
+```
+
+and then to submit:
+
+```bash
+exercism submit /path/to/file [/path/to/file2 ...]
 ```
 
 The exercism clones are in subfolders of [rust](rust).
