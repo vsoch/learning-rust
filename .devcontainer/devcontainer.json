@@ -1,0 +1,23 @@
+{
+    "name": "Learning Rust",
+    "dockerFile": "Dockerfile",
+    "context": "../",
+
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash"
+        },
+        "extensions": [
+			"ms-vscode.cpptools",
+			"rust-lang.rust-analyzer"
+		]
+      }
+    },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    }
+  },
+  "postStartCommand": "git config --global --add safe.directory /workspaces/learning-rust"
+}
